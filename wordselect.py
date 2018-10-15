@@ -67,7 +67,7 @@ try:
 
         if count % 10000 == 0:
             print("current lines:", count)
-        if count % 1000000 == 0:
+        if count % 200000 == 0:
             print("GC")
             gc.collect()
         line = f.readline()
