@@ -1,6 +1,7 @@
 #coding:utf-8
 import sys,re
 import json
+import gc
 import jieba
 import jieba.analyse
 import codecs
@@ -66,6 +67,9 @@ try:
 
         if count % 10000 == 0:
             print("current lines:", count)
+        if count % 1000000 == 0:
+            print("GC")
+            gc.collect()
         line = f.readline()
     f.close()
 
