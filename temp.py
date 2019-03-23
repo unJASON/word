@@ -1,7 +1,7 @@
 import sys,re
 from functools import reduce
 import codecs
-f = open('test.txt', 'rb')  # 源文本
+f = open('shuju/testapr.txt', 'rb')  # 源文本
 line = f.readline()
 array=line.decode('utf-8').split('][')
 array[0] = array[0][1:]
